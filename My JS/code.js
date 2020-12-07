@@ -6,7 +6,7 @@ $(document).ready(function(){
 	qrlogo = document.getElementById("qrlogo");
 	checkImg = 0;
 	
-	$("#button").click(showQR);
+	$("#button-submit").click(showQR);
 });
 
 function generateQR()
@@ -53,11 +53,11 @@ function showQR()
 	readURL(file);
 	
 	if(checkImg && qrdata.value != "")
-		{
-			qrlogo.style.opacity = "1";
-		}
+	{
+		qrlogo.style.opacity = "1";
+	}
 	else
-		{
-			qrlogo.style.opacity = "0";
-		}
+	{
+		qrlogo.style.opacity = "0";
+	}
 }

@@ -62,14 +62,14 @@
 	opacity: 0;
 }
 
-#div-button
+.div-button
 {
 	display: flex; 
 	justify-content: center; 
 	align-items: center;
 }
 
-#button
+#button-submit
 {
 	cursor: pointer;
 	font-size: 15px;

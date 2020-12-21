@@ -1,12 +1,14 @@
 // JavaScript Document
 
-var qrdata, qrlogo, checkImg;
+var qrdata, cover, qrlogo, checkImg, canvas;
 
 $(document).ready(function(){
 	qrlogo = document.getElementById("qrlogo");
+	cover = document.getElementById("cover");
 	checkImg = 0;
 	
 	$("#button-submit").click(showQR);
+	$("#button-download").click(downloadIMG);
 });
 
 function generateQR()
@@ -28,7 +30,6 @@ function generateQR()
 
 function readURL(input)
 {	
-	qrlogo.src = "#";
 	checkImg = 0;
 	
 	if (input.files && input.files[0])
@@ -55,9 +56,33 @@ function showQR()
 	if(checkImg && qrdata.value != "")
 	{
 		qrlogo.style.opacity = "1";
+		cover.style.opacity = "1";
 	}
 	else
 	{
 		qrlogo.style.opacity = "0";
+		cover.style.opacity = "0";
 	}
+}
+
+function creatCanvas()
+{
+	//$("#qrcode,#qrlogo").wrapAll("<div id='wrap-qr'></div>");
+	$("#canvas").remove();
+	html2canvas(document.querySelector("#qr-container")).then(canvas => {
+    	document.getElementById("div-canvas").append(canvas);
+		$("#div-canvas > canvas").attr("id","canvas");
+	});
+}
+
+function downloadIMG()
+{
+	creatCanvas();
+	
+	setTimeout(function(){
+		canvas = document.getElementById("canvas");
+ 		var dataURL = canvas.toDataURL();
+		console.log(dataURL);	
+	},200);
+	
 }

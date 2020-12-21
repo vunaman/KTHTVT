@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QR Code Generator</title>
+	
+	<link rel="stylesheet" type="text/css" href="My CSS/style.css" />
+	
+	<script type="text/javascript" src="My JS/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="My JS/html2canvas.min.js"></script>
+	<script type="text/javascript" src="My JS/html2canvas.js"></script>
+	<script type="text/javascript" src="My JS/qrcode.min.js"></script>
+	<script type="text/javascript" src="My JS/code.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header">Header</div>
+		<div id="menu">Menu</div>
+		<div id="content">
+			Content <br>
+			<br>
+			<br>
+			<br>
+			<br>
+			Link (or content): <input type="text" id="qr-data" /> <br>
+			Logo: <input type="file" id="file" name="file" />
+			<div id="qr-container">
+				<div id="qrcode"></div>
+				<div id="cover"></div>
+				<img id="qrlogo" src="#" />
+			</div>
+			<div class="div-button">
+				<button id="button-submit">Tạo mã QR</button>
+			</div>
+			<div class="div-button">
+				<a href="#" id="downloadQR" download>
+					<button id="button-download">Tải về</button>	
+				</a>
+			</div>
+		</div>
+		<div id="footer">Footer</div>
+		<div id="div-canvas"></div>
+	</div>
+</body>
+</html>

@@ -63,6 +63,8 @@ function showQR()
 		qrlogo.style.opacity = "0";
 		cover.style.opacity = "0";
 	}
+	
+	$("#canvas").remove();
 	setTimeout(function(){
 		creatCanvas();	
 	},200);
@@ -70,11 +72,9 @@ function showQR()
 
 function creatCanvas()
 {
-	//$("#qrcode,#qrlogo").wrapAll("<div id='wrap-qr'></div>");
-	$("#canvas").remove();
 	html2canvas(document.querySelector("#qr-container")).then(canvas => {
-    	document.getElementById("div-canvas").append(canvas);
-		$("#div-canvas > canvas").attr("id","canvas");
+    	document.getElementById("qr-container").appendChild(canvas);
+		$("#qr-container > canvas").attr("id","canvas");
 	});
 }
 

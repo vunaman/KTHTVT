@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	overflow: hidden;
+}
+
+#wrapper
+{
+	margin: auto;
+	width: 800px;
+	height: auto;
+}
+
+#header
+{
+	width: 100%;
+	height: 80px;
+	background-color: #FF0000;
+}
+
+#menu
+{
+	width: 100%;
+	height: 50px;
+	background-color: #59FF00;
+}
+
+#content-web
+{
+	/*width: 100%;
+	height: 500px;
+	background-color: #00FFD3;*/
+}
+
+#left
+{
+	width: 50%;
+	height: 500px;
+	background-color: aqua;
+	float: left;
+}
+
+#right
+{
+	width: 50%;
+	height: 500px;
+	background-color: #FFF500;
+	float: left;
+}
+
+#qr-container
+{
+	margin: auto;
+	margin-top: 0px; 
+	width: 200px;
+	height: 200px;
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+	background-color: white;
+}
+
+#qrcode
+{
+	position: absolute;
+	z-index: 0;
+	/*display: none;*/
+}
+
+.logo
+{
+	width: 43px;
+	height: 43px;
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	/*display: none;*/
+}
+
+#cover
+{	
+	z-index: 1;
+	background-color: white;
+}
+
+#qrlogo
+{
+	z-index: 2;
+}
+
+.div-button
+{
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+}
+
+#button-submit
+{
+	cursor: pointer;
+	font-size: 15px;
+}
+
+#footer
+{
+	width: 100%;
+	height: 65px;
+	background-color: #D000FF;
+	clear: both;
+}
+
+#canvas
+{
+	/*display: none;*/	
+	position: relative;
+	z-index: 3;
+}
